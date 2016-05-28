@@ -1,0 +1,22 @@
+:local(.addFriendInput) {
+  border-radius: 0;
+  border-color: #ABAAAA;
+  border-left: 0;
+  border-right: 0;
+}
+
+:local(.addFriendLine) {
+  list-style: none;
+  padding: 15px 10px 15px 10px;
+  background-color: white;
+  border-bottom: 1px solid #E3E3E3;
+  font-size:14px;
+  display: flex;
+  color:black;
+}
+
+:local(.addFriendLine a)
+{
+  text-align: center;
+  width:100% !important;
+}

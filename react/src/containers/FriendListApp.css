@@ -1,0 +1,23 @@
+body {
+  background-color: #F4F3FF;
+  display: block;
+  width: 100%;
+}
+
+:local(.friendListApp) {
+  width: 100%;
+  padding-top: 18px;
+  background-color: #263147;
+  border: 1px solid #E3E3E3;
+}
+
+:local(.friendListApp h1) {
+  color: white;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-top: 0;
+  padding-left: 10px;
+  font-family: Helvetica;
+}

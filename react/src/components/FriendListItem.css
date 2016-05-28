@@ -1,0 +1,46 @@
+:local(.friendListItem) {
+  list-style: none;
+  padding: 15px 10px 15px 20px;
+  background-color: white;
+  border-bottom: 1px solid #E3E3E3;
+  font-size:14px;
+  display: flex;
+}
+
+:local(.friendInfos) {
+  flex: 1 0 auto;
+}
+
+:local(.friendInfos span) {
+  font-weight: bold;
+  margin-top: 8px;
+  display: inline-block;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+:local(.friendActions) {
+  flex: 0 0 90px;
+}
+
+:local(.btnConf){
+  color: white !important; 
+}
+
+:local(.btnDel){
+  color: white !important;
+}
+
+:local(.btnAction), :local(.btnAction):active, :local(.btnAction):focus, :local(.btnAction):hover {
+  margin-right: 5px;
+  width:70px;
+  color: #5C75B0;
+  text-align: center;
+  padding:6px 1px !important;
+}
+
+button:focus {
+  outline: 0 !important;
+}

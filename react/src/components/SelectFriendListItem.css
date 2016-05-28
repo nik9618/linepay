@@ -1,0 +1,26 @@
+:local(.selectFriendListItem) {
+  list-style: none;
+  padding: 15px 5px 15px 5px;
+  background-color: white;
+  font-size:14px;
+  display: inline-block;
+  width:150px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right:10px;
+  margin-left:10px;
+}
+
+:local(.name) {
+  margin-left:5px;
+  height:20px;
+}
+
+:local(.chkbox) {
+  font-size:20px;
+  display:inline-block;
+  /*white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;*/
+}
