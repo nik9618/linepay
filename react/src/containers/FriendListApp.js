@@ -4,14 +4,14 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import * as FriendsActions from '../actions/FriendsActions';
-import { YouAre, FriendList, AddFriendInput, SelectFriendList, AmountPaid} from '../components';
+import { MyPayment, TotalPayment, FinalButton, Summarize, YouAre, FriendList, AddFriendInput, SelectFriendList, AmountPaid} from '../components';
 
 
 @connect(state => ({
-  friendlist: state.friendlist
+  currentstate: state.appstate,
 }))
 
-export default class Step1_Addfrien extends Component {
+export default class LinePay extends Component {
 
   static propTypes = {
     friendsById: PropTypes.object.isRequired,
@@ -19,26 +19,42 @@ export default class Step1_Addfrien extends Component {
   }
 
   render () {
-    const { friendlist: { friendsById }, dispatch } = this.props;
-    const actions = bindActionCreators(FriendsActions, dispatch);
 
+    const { currentstate: { transactions,isFinalized,payees,payers,payersById,friendsById,meName,meID,nameConfirmation }, dispatch } = this.props;
+    const actions = bindActionCreators(FriendsActions, dispatch);
+    var sum = 0;
+    for(var i=0; i<payers.length;i++)
+    {
+      sum+=payersById[payers[i]].amount;
+    }
     return (
       <div>
         <div className={styles.friendListApp}>
           <h1>1. Who are you ?</h1>
-          <YouAre />
-          <FriendList friends={friendsById} actions={actions} />
+          {meID!=-1?  <YouAre name={meName}/>: null}
+          <FriendList friends={friendsById} nameConf={nameConfirmation} actions={actions} />
           <AddFriendInput addFriend={actions.addFriend} />
         </div>
         <div className={styles.friendListApp}>
           <h1>2. Payer</h1>
-          <AmountPaid friends={friendsById} actions={actions} />
-          <SelectFriendList friends={friendsById} actions={actions} />
+          <AmountPaid payersID={payers} payers={payersById} friends={friendsById} actions={actions} />
+          <SelectFriendList selectedID={payers} friends={friendsById} actions={actions} />
           <AddFriendInput addFriend={actions.addFriend} />
         </div>
         <div className={styles.friendListApp}>
           <h1>3. Payee</h1>
+          <Summarize number={payees.length} each={sum/payees.length}/>
+          <SelectFriendList selectedID={payees} friends={friendsById} actions={actions} />
           <AddFriendInput addFriend={actions.addFriend} />
+        </div>
+        <div className={styles.friendListApp}>
+          <h1>4.Finalize</h1>
+          <FinalButton finalized={isFinalized} />
+        </div>
+        <div className={styles.friendListApp}>
+          <h1>Payment Information</h1>
+          <MyPayment currentName={meName} currentId={meID} friends={friendsById} transactions={transactions}/>
+          <TotalPayment friends={friendsById} transactions={transactions}/>
         </div>
       </div>
     );

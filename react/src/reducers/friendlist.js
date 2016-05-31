@@ -4,26 +4,45 @@ import assign from 'lodash/object/assign';
 import mapValues from 'lodash/object/mapValues';
 
 const initialState = {
-  friends: [1, 2, 3],
+  meID:2,
+  meName:'Kanit',
+  nameConfirmation: 2,
+  friends: [1, 2, 3, 4],
   friendsById: {
     1: {
       id: 1,
-      name: 'Theodore Roosevelt'
+      name: 'Komthep',
     },
     2: {
       id: 2,
-      name: 'Abraham Lincoln'
+      name: 'Kanit',
     },
     3: {
       id: 3,
-      name: 'George Washington'
+      name: 'PanJ',
+    },
+    4: {
+      id: 4,
+      name: 'Sarawoot',
     }
-  }
+  },
+  payers: [1,2],
+  payersById: {
+    1:{id:1, amount:100},
+    2:{id:2, amount:200}
+  },
+  payees: [1,2,3],
+  isFinalized: true,
+  transactions:[
+    [1,2,23301,0],
+    [2,3,23302,1],
+    [3,4,23303,0],
+  ]
 };
 
 export default function friends(state = initialState, action) {
   switch (action.type) {
-
+    
     case types.ADD_FRIEND:
       const newId = state.friends[state.friends.length-1] + 1;
       return {

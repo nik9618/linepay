@@ -1,0 +1,76 @@
+:local(.myPaymentLine) {
+  list-style: none;
+  padding: 15px 10px 15px 10px;
+  background-color: white;
+  border-bottom: 1px solid #E3E3E3;
+  font-size:14px;
+  display: block;
+  color:black;
+  width:100%;
+}
+
+:local(.first)
+{
+  display:block;
+  padding-left:10px;
+  padding-right:10px;
+  margin-bottom:10px;
+  width:100%;
+}
+
+:local(.second)
+{
+  display:block;
+  width:100%;
+  padding-left:30px;
+}
+
+:local(.second .payline)
+{
+  display:block;
+  height:40px;
+}
+
+:local(.second .payline .payer)
+{
+  display:inline-block;
+  width: 120px;
+  margin-right:10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top:7px;
+}
+
+:local(.second .payline .amount)
+{
+  display:inline-block;
+  width: 80px;
+  margin-right:10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top:7px;
+}
+
+:local(.second .payline .paidBtn)
+{
+  display:inline-block;
+  float:right;
+}
+:local(.second .payline .paidBtn button)
+{
+  width:100px;
+}
+
+:local(.myPaymentLine span)
+{
+  width:100%;
+  text-align:center;
+  display:inline-block;
+  color:#666;
+}
+
+
+
+

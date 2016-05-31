@@ -14,7 +14,7 @@ export default class FriendListItem extends Component {
   render () {
     return (
       <div className={styles.selectFriendListItem}>
-        <i className={`${styles.chkbox} fa fa-check-square-o`} aria-hidden="true"></i>
+        <i className={`${styles.chkbox} fa `+ (this.props.checked==1? `fa-check-square-o` : `fa-square-o`)} aria-hidden="true"></i>
         <span className={`${styles.name}`}>{this.props.name}</span>
       </div>
     );

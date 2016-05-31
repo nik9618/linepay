@@ -19,7 +19,7 @@ export default class SelectFriendList extends Component {
               key={friend.id}
               id={friend.id}
               name={friend.name}
-              starred={friend.starred}
+              checked={this.props.selectedID.indexOf(friend.id)>-1 ? 1 : 0}
               {...this.props.actions} />);
           })
         }

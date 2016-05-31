@@ -1,0 +1,76 @@
+:local(.totalPaymentLine) {
+  list-style: none;
+  padding: 15px 10px 15px 10px;
+  background-color: white;
+  border-bottom: 1px solid #E3E3E3;
+  font-size:14px;
+  display: block;
+  color:black;
+  width:100%;
+}
+
+:local(.first)
+{
+  display:block;
+  padding-left:10px;
+  padding-right:10px;
+  margin-bottom:10px;
+  width:100%;
+}
+
+:local(.second)
+{
+  display:block;
+  width:100%;
+  padding-left:10px;
+}
+
+:local(.second .payline)
+{
+  display:block;
+  height:25px;
+}
+
+:local(.second .payline .payer)
+{
+  display:inline-block;
+  width: 30%;
+  margin-right:2%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+:local(.second .payline .payee)
+{
+  display:inline-block;
+  width: 30%;
+  margin-right:2%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+:local(.second .payline .money)
+{
+  display:inline-block;
+  width: 15%;
+  margin-right:2%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+:local(.second .payline .status)
+{
+  display:inline-block;
+  width: 19%;
+  /*margin-right:10px;*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+

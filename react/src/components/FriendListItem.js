@@ -19,12 +19,13 @@ export default class FriendListItem extends Component {
         </div>
         <div>
           <div className={styles.friendActions}>
-            <button className={`btn btn-default ${styles.btnAction}`} onClick={() => this.props.starFriend(this.props.id)}>
-              It's me
-            </button>
+            {this.props.nameConf != this.props.id?<button className={`btn btn-default ${styles.btnAction}`} onClick={() => this.props.starFriend(this.props.id)}>
+                It's me
+              </button>:
             <button className={`btn btn-success ${styles.btnAction} ${styles.btnDel}`} onClick={() => this.props.starFriend(this.props.id)}>
               Confirm
             </button>
+            }
             <button className={`btn btn-danger ${styles.btnAction} ${styles.btnConf}`} onClick={() => this.props.starFriend(this.props.id)}>
               Delete 
             </button>

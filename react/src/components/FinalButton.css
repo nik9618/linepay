@@ -1,0 +1,20 @@
+:local(.finalButtonLine) {
+  list-style: none;
+  padding: 15px 10px 15px 10px;
+  background-color: white;
+  border-bottom: 1px solid #E3E3E3;
+  font-size:14px;
+  display: flex;
+  color:black;
+}
+:local(.finalButtonLine button)
+{
+  margin-left:10px;
+  margin-right:10px;
+  width:100%;
+}
+:local(.finalButtonLine span)
+{
+  width:100%;
+  text-align:center;
+}

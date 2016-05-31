@@ -19,7 +19,7 @@ export default class FriendListItem extends Component {
         </div>
         <div>
           <div className={styles.friendActions}>
-            <input className={styles.inputBox} type="number" pattern="[0-9]"/> บาท
+            <input value={this.props.amount} className={styles.inputBox} type="number" pattern="[0-9]"/> บาท
           </div>
         </div>
       </li>

@@ -14,14 +14,14 @@ export default class AmountPaid extends Component {
   render () {
     return (
       <ul className={styles.friendList}>
-        <NoSelection />
+        {this.props.payers.length == 0 ? <NoSelection /> : null}
         {
-          mapValues(this.props.friends, (friend) => {
+          mapValues(this.props.payersID, (pid) => {
             return (<AmountPaidItem
-              key={friend.id}
-              id={friend.id}
-              name={friend.name}
-              starred={friend.starred}
+              key={pid}
+              id={pid}
+              name={this.props.friends[pid].name}
+              amount={this.props.payers[pid].amount}
               {...this.props.actions} />);
           })
         }

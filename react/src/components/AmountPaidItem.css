@@ -25,9 +25,9 @@
   flex: 0 0 90px;
 }
 
-:local(.inputBox)
+:local(input)
 {
-
+  text-align:right;
 }
 
 button:focus {

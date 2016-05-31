@@ -17,7 +17,6 @@ export default class App extends Component {
         <Provider store={store}>
           {() => <FriendListApp /> }
         </Provider>
-
         {renderDevTools(store)}
       </div>
     );
